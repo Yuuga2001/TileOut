@@ -345,7 +345,7 @@ function App() {
             </div>
           </div>
           <div className={`player-info ${gameState.currentPlayer === 'white' ? 'active' : ''}`}>
-            <div className="player-name">⚪ 白プレイヤー</div>
+            <div className="player-name">⚪ 白プレイヤー{gameState.mode === 'ai' ? ' (AI)' : ''}</div>
             <div className="player-stats">
               <div>最大連結: {gameState.whiteMaxConnection}</div>
               <div>操作: タイルをクリックして行を右へ</div>
