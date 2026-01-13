@@ -317,8 +317,7 @@ function App() {
       )}
       <div className="game-container">
         <div className="game-header">
-          <h1 className="game-title">Tile Out</h1>
-          <p className="game-subtitle">タイルアウト - 戦略ボードゲーム</p>
+          <h1 className="game-title" onClick={handleRestart}>Tile Out</h1>
         </div>
 
         <div className="mode-selector">
@@ -338,18 +337,10 @@ function App() {
 
         <div className="game-info">
           <div className={`player-info ${gameState.currentPlayer === 'black' ? 'active' : ''}`}>
-            <div className="player-name">⚫ 黒プレイヤー</div>
-            <div className="player-stats">
-              <div>最大連結: {gameState.blackMaxConnection}</div>
-              <div>操作: タイルをクリックして列を上へ</div>
-            </div>
+            ⚫ 黒{gameState.currentPlayer === 'black' ? 'のターン' : ''}
           </div>
           <div className={`player-info ${gameState.currentPlayer === 'white' ? 'active' : ''}`}>
-            <div className="player-name">⚪ 白プレイヤー{gameState.mode === 'ai' ? ' (AI)' : ''}</div>
-            <div className="player-stats">
-              <div>最大連結: {gameState.whiteMaxConnection}</div>
-              <div>操作: タイルをクリックして行を右へ</div>
-            </div>
+            ⚪ 白{gameState.mode === 'ai' ? ' (AI)' : ''}{gameState.currentPlayer === 'white' ? 'のターン' : ''}
           </div>
         </div>
 
