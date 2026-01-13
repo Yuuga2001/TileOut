@@ -1,4 +1,4 @@
-import { TileColor, Player, Direction, GameState, Move, Position, GameStatus } from './types';
+import { TileColor, Player, GameState, Move, Position, GameStatus } from './types';
 
 const BOARD_SIZE = 8;
 const WIN_CONNECTION = 10;
@@ -65,13 +65,13 @@ function slideColumn(board: TileColor[][], col: number, direction: 'up' | 'down'
   }
 
   if (direction === 'up') {
-    const first = column.shift()!;
+    column.shift()!;
     // 一番下に新しいタイルを配置（その上のタイルと異なる色）
     const aboveTile = column[column.length - 1];
     const newTile = aboveTile === 'black' ? 'white' : 'black';
     column.push(newTile);
   } else {
-    const last = column.pop()!;
+    column.pop()!;
     // 一番上に新しいタイルを配置（その下のタイルと異なる色）
     const belowTile = column[0];
     const newTile = belowTile === 'black' ? 'white' : 'black';
@@ -85,13 +85,13 @@ function slideColumn(board: TileColor[][], col: number, direction: 'up' | 'down'
 
 function slideRow(board: TileColor[][], row: number, direction: 'left' | 'right'): void {
   if (direction === 'left') {
-    const first = board[row].shift()!;
+    board[row].shift()!;
     // 一番右に新しいタイルを配置（その左のタイルと異なる色）
     const leftTile = board[row][board[row].length - 1];
     const newTile = leftTile === 'black' ? 'white' : 'black';
     board[row].push(newTile);
   } else {
-    const last = board[row].pop()!;
+    board[row].pop()!;
     // 一番左に新しいタイルを配置（その右のタイルと異なる色）
     const rightTile = board[row][0];
     const newTile = rightTile === 'black' ? 'white' : 'black';
