@@ -337,10 +337,10 @@ function App() {
 
         <div className="game-info">
           <div className={`player-info ${gameState.currentPlayer === 'black' ? 'active' : ''}`}>
-            ⚫ 黒{gameState.currentPlayer === 'black' ? 'のターン' : ''}
+            ⚫ Black
           </div>
           <div className={`player-info ${gameState.currentPlayer === 'white' ? 'active' : ''}`}>
-            ⚪ 白{gameState.mode === 'ai' ? ' (AI)' : ''}{gameState.currentPlayer === 'white' ? 'のターン' : ''}
+            ⚪ White{gameState.mode === 'ai' ? ' (AI)' : ''}
           </div>
         </div>
 
