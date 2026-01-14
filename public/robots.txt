@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tileout.example.com/sitemap.xml
+Sitemap: https://tileout.riverapp.jp/sitemap.xml

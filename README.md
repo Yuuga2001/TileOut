@@ -25,9 +25,9 @@ Tile Out（タイルアウト）は、盤面を列行のスライド操作で動
 - `/public/sitemap.xml`: 検索エンジンがページを発見しやすくするためのサイトマップ
 - `/public/robots.txt`: クローラーの動作を制御
 
-### デプロイ前の設定変更
-以下のURLを実際のドメインに変更してください：
-1. `index.html` 内の `https://tileout.example.com/` をすべて実際のURLに変更
-2. `sitemap.xml` 内のURLを実際のURLに変更
-3. `robots.txt` 内のSitemapのURLを実際のURLに変更
-4. OG画像 (`og-image.png`) とスクリーンショット (`screenshot.png`) を `/public/` に配置
+### デプロイ設定完了 ✅
+以下の設定が完了しています：
+1. ✅ `index.html` 内のURL: `https://tileout.riverapp.jp/`
+2. ✅ `sitemap.xml` 内のURL: `https://tileout.riverapp.jp/`
+3. ✅ `robots.txt` 内のSitemapのURL: `https://tileout.riverapp.jp/`
+4. ✅ OG画像 (`og-image.png`: 269KB) と スクリーンショット (`screenshot.png`: 366KB) を `/public/` に配置済み
