@@ -366,6 +366,10 @@ function App() {
             )}
           </div>
         </div>
+
+        <div className="win-condition">
+          🏆 10タイル連結で勝利
+        </div>
       </div>
     </div>
   );
