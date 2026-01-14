@@ -189,6 +189,18 @@ function checkGameStatus(
   blackMaxConn: number,
   whiteMaxConn: number
 ): GameStatus {
+  // 両方が10個以上連結した場合、連結数が多い方が勝ち、同じなら引き分け
+  if (blackMaxConn >= WIN_CONNECTION && whiteMaxConn >= WIN_CONNECTION) {
+    if (blackMaxConn > whiteMaxConn) {
+      return 'blackWin';
+    } else if (whiteMaxConn > blackMaxConn) {
+      return 'whiteWin';
+    } else {
+      return 'draw';
+    }
+  }
+
+  // どちらか一方のみが10個以上連結した場合
   if (blackMaxConn >= WIN_CONNECTION) {
     return 'blackWin';
   }
@@ -196,6 +208,7 @@ function checkGameStatus(
     return 'whiteWin';
   }
 
+  // 両方が最小タイル数を下回った場合、連結数で判定
   if (blackCount < MIN_TILES && whiteCount < MIN_TILES) {
     if (blackMaxConn > whiteMaxConn) {
       return 'blackWin';
@@ -206,6 +219,7 @@ function checkGameStatus(
     }
   }
 
+  // どちらか一方のみが最小タイル数を下回った場合
   if (blackCount < MIN_TILES) {
     return 'whiteWin';
   }
