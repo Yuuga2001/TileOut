@@ -7,8 +7,8 @@ import { getAIMove } from './aiLogic';
 const BOARD_SIZE = 8;
 
 function App() {
-  const [gameState, setGameState] = useState<GameState>(createInitialGameState('twoPlayer'));
-  const [selectedMode, setSelectedMode] = useState<GameMode>('twoPlayer');
+  const [gameState, setGameState] = useState<GameState>(createInitialGameState('ai'));
+  const [selectedMode, setSelectedMode] = useState<GameMode>('ai');
   const [isAnimating, setIsAnimating] = useState(false);
   const [hoveredRow, setHoveredRow] = useState<number | null>(null);
   const [hoveredCol, setHoveredCol] = useState<number | null>(null);
